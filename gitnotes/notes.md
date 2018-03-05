@@ -38,3 +38,23 @@
 - `git log --pretty=oneline`常看当前提交的历史简洁版
 - `git reset --hard commit_id`commit_id代表指向的HEAD^
 - `git reflog`查看命令历史进行回到未来
+- # git 修改总结
+- `git add`第一次修改提交只是储存在暂存区没有进行commit
+- `git add`第二次修改后不进行提交存放在工作区
+- `git add`第三次提交第二次的修改合并第一次的提交
+- `git commit`第四次进行commit
+- # git 的撤销操作
+- `git checkout -- file`回到最后一次编辑位置
+- 
+- `git reset HEAD file`如果你不小心add进入了暂存区你就要用这个回滚到head的地方然后在执行checkout
+- `git rm`用于删除仓库文件
+- # 仓库分布式部署流程
+- `$ ssh-keygen -t rsa -C "youremail@example.com"`创建SSH Key
+- `Create a new repo`创建一个新的仓库
+- `根据页面提示在终端执行一边代码`
+- `$ git remote add origin git@github.com:自己的git用户民/learngit.git`以后推送设置
+- `$ git push -u origin master`推送到git第一次推送使用-u
+- `$ git push origin master`
+- 以后直接推送
+- `git remote add origin git@server-name:path/repo-name.git`要关联一个远程库
+- ``
